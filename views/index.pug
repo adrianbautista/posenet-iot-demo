@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+
+  .container
+    canvas#canvas(width="640", height="480")
+    video#video(width="640", height="480", style="display: none", muted="muted")
+
+  button#start Start
+
+  #debug
+    p#leftWrist --
+    p#rightWrist --
+
+  script(src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs")
+  script(src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet")
+  script(src='/javascripts/client.js')
